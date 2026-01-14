@@ -1,34 +1,22 @@
 // 01-5 이름공간(namespace)에 대한 소개
 #include <iostream>
 
-namespace BestComImpl {
-	void SimpleFunc(void);
-}
+namespace Parent {
+	int num = 2;
 
-namespace BestComImpl {
-	void PrettyFunc(void);
-}
+	namespace SubOne {
+		int num = 3;
+	}
 
-namespace ProgComImpl {
-	void SimpleFunc(void);
+	namespace SubTwo {
+		int num = 4;
+	}
 }
 
 int main(void) {
-	BestComImpl::SimpleFunc();
+	std::cout << Parent::num << std::endl;
+	std::cout << Parent::SubOne::num << std::endl;
+	std::cout << Parent::SubTwo::num << std::endl;
 
 	return 0;
-}
-
-void BestComImpl::SimpleFunc(void) {
-	std::cout << "BestCom이 정의한 함수" << std::endl;
-	PrettyFunc();
-	ProgComImpl::SimpleFunc();
-}
-
-void BestComImpl::PrettyFunc(void) {
-	std::cout << "So Pretty!!" << std::endl;
-}
-
-void ProgComImpl::SimpleFunc(void) {
-	std::cout << "ProgCom이 정의한 함수" << std::endl;
 }
