@@ -2,12 +2,22 @@
 #include <iostream>
 using namespace std;
 
+namespace AAA {
+	namespace BBB {
+		namespace CCC {
+			int num1;
+			int num2;
+		}
+	}
+}
+
 int main(void) {
-	int num = 20;
-	cout << "Hello World!" << endl;
-	cout << "Hello " << "World!" << endl;
-	cout << num << ' ' << 'A';
-	cout <<' ' << 3.14 << endl;
+	AAA::BBB::CCC::num1 = 20;
+	AAA::BBB::CCC::num2 = 30;
+
+	namespace ABC = AAA::BBB::CCC;
+	cout << ABC::num1 << endl;
+	cout << ABC::num2 << endl;
 
 	return 0;
 }
