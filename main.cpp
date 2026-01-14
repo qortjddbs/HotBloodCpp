@@ -1,16 +1,12 @@
-// 01-3 매개변수의 디폴트 값 (Default Value)
+// 01-4 인라인(inline) 함수
 #include <iostream>
-int BoxVolume(int length, int width = 1, int height = 1);
 
-int main(void) {
-	std::cout << "[3, 3, 3] : " << BoxVolume(3, 3, 3) << std::endl;
-	std::cout << "[5, 5, D] : " << BoxVolume(5, 5) << std::endl;
-	std::cout << "[7, D, D] : " << BoxVolume(7) << std::endl;
-	// std::cout << "[D, D, D] : " << BoxVolume() << std::endl;
-
-	return 0;
+inline int SQUARE(int x) {
+	return x * x;
 }
 
-int BoxVolume(int length, int width, int height) {
-	return length * width * height;
+int main(void) {
+	std::cout << SQUARE(5) << std::endl;
+	std::cout << SQUARE(12) << std::endl;
+	return 0;
 }
