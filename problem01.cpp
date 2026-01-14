@@ -27,3 +27,6 @@ int main(void) {
 // int BoxVolume(int length, int width, int height) {
 // 	return length * width * height;
 // }
+
+// 문제 2
+// 답 : SimpleFunc을 호출할 때 인자로 아무것도 넣지 않으면 int SimpleFunc(int a=10)을 호출했는지 int SimpleFunc(void)를 호출했는지 알 수 없다는 문제점이 있다.
