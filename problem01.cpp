@@ -1,35 +1,29 @@
+// 문제 01-3 [매개변수의 디폴트 값]
 #include <iostream>
 
-void swap(int* a, int* b) {
-	int temp = *a;
-	*a = *b;
-	*b = temp;
+// 문제 1
+// int BoxVolume(int length, int width = 1, int height = 1);
+int BoxVolume(int length) {
+	return length * 1 * 1;
 }
 
-void swap(char* a, char* b) {
-	char temp = *a;
-	*a = *b;
-	*b = temp;
+int BoxVolume(int length, int width) {
+	return length * width * 1;
 }
 
-void swap(double* a, double* b) {
-	double temp = *a;
-	*a = *b;
-	*b = temp;
+int BoxVolume(int length, int width, int height) {
+	return length * width * height;
 }
 
 int main(void) {
-	int num1 = 20, num2 = 30;
-	swap(&num1, &num2);
-	std::cout << num1 << ' ' << num2 << std::endl;
-
-	char ch1 = 'A', ch2 = 'Z';
-	swap(&ch1, &ch2);
-	std::cout << ch1 << ' ' << ch2 << std::endl;
-
-	double dbl1 = 1.111, dbl2 = 2.222;
-	swap(&dbl1, &dbl2);
-	std::cout << dbl1 << ' ' << dbl2 << std::endl;
+	std::cout << "[3, 3, 3] : " << BoxVolume(3, 3, 3) << std::endl;
+	std::cout << "[5, 5, D] : " << BoxVolume(5, 5) << std::endl;
+	std::cout << "[7, D, D] : " << BoxVolume(7) << std::endl;
+	// std::cout << "[D, D, D] : " << BoxVolume() << std::endl;
 
 	return 0;
 }
+
+// int BoxVolume(int length, int width, int height) {
+// 	return length * width * height;
+// }

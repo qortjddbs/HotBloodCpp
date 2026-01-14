@@ -1,22 +1,16 @@
-// 01-2 함수 오버로딩 (Function Overloading)
+// 01-3 매개변수의 디폴트 값 (Default Value)
 #include <iostream>
-
-void MyFunc(void) {
-	std::cout << "MyFunc(void) called" << std::endl;
-}
-
-void MyFunc(char c) {
-	std::cout << "MyFunc(char c) called" << std::endl;
-}
-
-void MyFunc(int a, int b) {
-	std::cout << "MyFunc(int a, int b) called" << std::endl;
-}
+int BoxVolume(int length, int width = 1, int height = 1);
 
 int main(void) {
-	MyFunc();
-	MyFunc('A');
-	MyFunc(12, 13);
+	std::cout << "[3, 3, 3] : " << BoxVolume(3, 3, 3) << std::endl;
+	std::cout << "[5, 5, D] : " << BoxVolume(5, 5) << std::endl;
+	std::cout << "[7, D, D] : " << BoxVolume(7) << std::endl;
+	// std::cout << "[D, D, D] : " << BoxVolume() << std::endl;
 
 	return 0;
+}
+
+int BoxVolume(int length, int width, int height) {
+	return length * width * height;
 }
