@@ -1,13 +1,21 @@
-// 01-4 인라인(inline) 함수
+// 01-5 이름공간(namespace)에 대한 소개
 #include <iostream>
 
-template <typename T>
-inline T SQUARE(T x) {
-	return x * x;
+namespace BestComImpl {
+	void SimpleFunc(void) {
+		std::cout << "BestCom이 정의한 함수" << std::endl;
+	}
+}
+
+namespace ProgComImpl {
+	void SimpleFunc(void) {
+		std::cout << "ProgCom이 정의한 함수" << std::endl;
+	}
 }
 
 int main(void) {
-	std::cout << SQUARE(5.5) << std::endl;
-	std::cout << SQUARE(12) << std::endl;
+	BestComImpl::SimpleFunc();
+	ProgComImpl::SimpleFunc();
+
 	return 0;
 }
