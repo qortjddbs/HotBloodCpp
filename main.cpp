@@ -1,8 +1,6 @@
 // 01-5 이름공간(namespace)에 대한 소개
 #include <iostream>
-using std::cin;
-using std::cout;
-using std::endl;
+using namespace std;
 
 int main(void) {
 	int num = 20;
