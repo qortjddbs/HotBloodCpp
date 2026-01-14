@@ -1,14 +1,19 @@
 #include <iostream>
 
 int main(void) {
-	char name[100];
-	char num[100];
+	int num;
+	std::cout << "구구단을 출력할 숫자를 입력하세요 : ";
+	std::cin >> num;
 
-	std::cout << "이름과 전화번호를 순서대로 입력하세요 : ";
-	std::cin >> name >> num;
-
-	std::cout << "이름 : " << name << std::endl;
-	std::cout << "전화번호 : " << num << std::endl;
+	std::cout << num << " x 1 = " << num * 1 << std::endl;
+	std::cout << num << " x 2 = " << num * 2 << std::endl;
+	std::cout << num << " x 3 = " << num * 3 << std::endl;
+	std::cout << num << " x 4 = " << num * 4 << std::endl;
+	std::cout << num << " x 5 = " << num * 5 << std::endl;
+	std::cout << num << " x 6 = " << num * 6 << std::endl;
+	std::cout << num << " x 7 = " << num * 7 << std::endl;
+	std::cout << num << " x 8 = " << num * 8 << std::endl;
+	std::cout << num << " x 9 = " << num * 9 << std::endl;
 
 	return 0;
 }
