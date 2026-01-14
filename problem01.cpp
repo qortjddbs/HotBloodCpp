@@ -1,17 +1,35 @@
 #include <iostream>
 
-int main(void) {
-	int sale;
-	int salary;
+void swap(int* a, int* b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
 
-	while (1) {
-		std::cout << "판매 금액을 만원 단위로 입력(-1 to end) : ";
-		std::cin >> sale;
-		if (sale == -1) break;
-		salary = 50 + sale * 0.12;
-		std::cout << "이번 달 급여 : " << salary << "만원" << std::endl;
-	}
-	std::cout << "프로그램을 종료합니다. \n";
+void swap(char* a, char* b) {
+	char temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void swap(double* a, double* b) {
+	double temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+int main(void) {
+	int num1 = 20, num2 = 30;
+	swap(&num1, &num2);
+	std::cout << num1 << ' ' << num2 << std::endl;
+
+	char ch1 = 'A', ch2 = 'Z';
+	swap(&ch1, &ch2);
+	std::cout << ch1 << ' ' << ch2 << std::endl;
+
+	double dbl1 = 1.111, dbl2 = 2.222;
+	swap(&dbl1, &dbl2);
+	std::cout << dbl1 << ' ' << dbl2 << std::endl;
 
 	return 0;
 }
