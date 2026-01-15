@@ -13,19 +13,34 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Chapter01">
+      <UniqueIdentifier>{4367f4a6-822c-4f6c-859c-6f16c1ba4d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Chapter02">
+      <UniqueIdentifier>{47fae9c9-e489-4bc6-a844-27c0a0d9947b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="TrueAndFalse.cpp">
+      <Filter>소스 파일\Chapter02</Filter>
     </ClCompile>
-    <ClCompile Include="problem01.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="p01-4(1).cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="bank.cpp">
+      <Filter>소스 파일\Chapter01</Filter>
     </ClCompile>
     <ClCompile Include="BankingSystemVer01.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Chapter01</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일\Chapter01</Filter>
+    </ClCompile>
+    <ClCompile Include="p01-4(1).cpp">
+      <Filter>소스 파일\Chapter01</Filter>
+    </ClCompile>
+    <ClCompile Include="problem01.cpp">
+      <Filter>소스 파일\Chapter01</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTypeBool.cpp">
+      <Filter>소스 파일\Chapter02</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
