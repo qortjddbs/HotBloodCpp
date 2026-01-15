@@ -57,6 +57,18 @@
     <ClCompile Include="p02-1.cpp">
       <Filter>소스 파일\Chapter02</Filter>
     </ClCompile>
+    <ClCompile Include="RefReturnOne.cpp">
+      <Filter>소스 파일\Chapter02</Filter>
+    </ClCompile>
+    <ClCompile Include="RefReturnTwo.cpp">
+      <Filter>소스 파일\Chapter02</Filter>
+    </ClCompile>
+    <ClCompile Include="RefReturnThree.cpp">
+      <Filter>소스 파일\Chapter02</Filter>
+    </ClCompile>
+    <ClCompile Include="p02-2.cpp">
+      <Filter>소스 파일\Chapter02</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
