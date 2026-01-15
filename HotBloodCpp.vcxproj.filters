@@ -78,6 +78,9 @@
     <ClCompile Include="NewObject.cpp">
       <Filter>소스 파일\Chapter02</Filter>
     </ClCompile>
+    <ClCompile Include="p02-3.cpp">
+      <Filter>소스 파일\Chapter02</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
