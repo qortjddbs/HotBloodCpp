@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+#include <cstring>	// 이거 안써도 되네??
 #include <iostream>
 using namespace std;
 
