@@ -120,6 +120,9 @@
     <ClCompile Include="RacingInlineMain.cpp">
       <Filter>소스 파일\Chapter03</Filter>
     </ClCompile>
+    <ClCompile Include="p03-2.cpp">
+      <Filter>소스 파일\Chapter03</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
