@@ -1,3 +1,4 @@
+// pragma once나 ifndef ~ endif 둘 중 하나만 써주면 됨. (기능은 같음)
 #pragma once
 #ifndef __CAR_H__
 #define __CAR_H__
