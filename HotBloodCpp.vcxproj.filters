@@ -19,6 +19,9 @@
     <Filter Include="소스 파일\Chapter02">
       <UniqueIdentifier>{47fae9c9-e489-4bc6-a844-27c0a0d9947b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Chapter03">
+      <UniqueIdentifier>{4d5ed519-32c5-4b4d-8b3e-95ae61581c41}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TrueAndFalse.cpp">
@@ -86,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="p02-4.cpp">
       <Filter>소스 파일\Chapter02</Filter>
+    </ClCompile>
+    <ClCompile Include="RacingCar.cpp">
+      <Filter>소스 파일\Chapter03</Filter>
+    </ClCompile>
+    <ClCompile Include="RacingCarFuncAdd.cpp">
+      <Filter>소스 파일\Chapter03</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
