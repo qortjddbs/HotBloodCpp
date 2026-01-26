@@ -22,6 +22,12 @@
     <Filter Include="소스 파일\Chapter03">
       <UniqueIdentifier>{4d5ed519-32c5-4b4d-8b3e-95ae61581c41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Chapter04">
+      <UniqueIdentifier>{de64f72b-bb2f-498a-a5db-8161ed8898d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\4장">
+      <UniqueIdentifier>{0235f80b-47fe-4448-8f59-5a2bdaacd5a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TrueAndFalse.cpp">
@@ -129,6 +135,18 @@
     <ClCompile Include="FruitSaleSim1.cpp">
       <Filter>소스 파일\Chapter03</Filter>
     </ClCompile>
+    <ClCompile Include="RectangleFault.cpp">
+      <Filter>소스 파일\Chapter04</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>소스 파일\Chapter04</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>소스 파일\Chapter04</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleFaultFind.cpp">
+      <Filter>소스 파일\Chapter04</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
@@ -139,6 +157,12 @@
     </ClInclude>
     <ClInclude Include="CarInline.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>헤더 파일\4장</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>헤더 파일\4장</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
