@@ -13,12 +13,16 @@ public:
 		myMoney = money;
 	}
 	int SaleApples(int money) {
+		if (money < 0) {
+			cout << "잘못된 정보가 전달되어 판매를 취소합니다." << endl;
+			return 0;
+		}
 		int num = money / APPLE_PRICE;
 		numOfApples -= num;
 		myMoney += money;
 		return num;
 	}
-	void ShowSalesResult() {
+	void ShowSalesResult() const {
 		cout << "남은 사과 : " << numOfApples << endl;
 		cout << "판매 수익 : " << myMoney << endl;
 	}
@@ -34,10 +38,14 @@ public:
 		numOfApples = 0;
 	}
 	void BuyApples(FruitSeller& seller, int money) {
+		if (money < 0) {
+			cout << "잘못된 정보가 전달되어 구매를 취소합니다." << endl;
+			return;
+		}
 		numOfApples += seller.SaleApples(money);
 		myMoney -= money;
 	}
-	void ShowBuyResult() {
+	void ShowBuyResult() const {
 		cout << "현재 잔액 : " << myMoney << endl;
 		cout << "사과 개수 : " << numOfApples << endl;
 	}
@@ -48,7 +56,7 @@ int main(void) {
 	seller.InitMembers(1000, 20, 0);
 	FruitBuyer buyer;
 	buyer.InitMembers(5000);
-	buyer.BuyApples(seller, 2000);
+	buyer.BuyApples(seller, -1);
 
 	cout << "과일 판매자 현황" << endl;
 	seller.ShowSalesResult();
