@@ -13,9 +13,4 @@ public:
 	bool SetX(int xpos);
 	bool SetY(int ypos);
 };
-
-Point::Point(const int& xpos, const int& ypos) {
-	x = xpos;
-	y = ypos;
-}
 #endif
