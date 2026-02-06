@@ -9,8 +9,6 @@
 #include <cstring>
 using namespace std;
 
-int AccNum = 0;
-
 namespace BANK_COM {
 	enum {
 		MAKE = 1,
@@ -59,6 +57,9 @@ public:
 	}
 };
 
+Account* AccPtr[100];		// 일단 계좌는 총 100개까지만 개설 가능
+int AccNum = 0;
+
 int main(void) {
 	while (1) {
 		int command = -1;
@@ -76,7 +77,6 @@ int main(void) {
 
 		switch (command) {
 		case BANK_COM::MAKE:
-			Account * AccPtr[100];		// 일단 계좌는 총 100개까지만 개설 가능
 			int ID;
 			char name[20];		// 이름은 최대 20자까지 입력 가능
 			int money;
