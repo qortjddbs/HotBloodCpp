@@ -28,15 +28,15 @@
     <Filter Include="헤더 파일\4장">
       <UniqueIdentifier>{0235f80b-47fe-4448-8f59-5a2bdaacd5a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\OOP">
+      <UniqueIdentifier>{17316ebd-cb99-457d-96ac-6aae6a8694c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TrueAndFalse.cpp">
       <Filter>소스 파일\Chapter02</Filter>
     </ClCompile>
     <ClCompile Include="bank.cpp">
-      <Filter>소스 파일\Chapter01</Filter>
-    </ClCompile>
-    <ClCompile Include="BankingSystemVer01.cpp">
       <Filter>소스 파일\Chapter01</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -197,6 +197,12 @@
     </ClCompile>
     <ClCompile Include="SelfRef.cpp">
       <Filter>소스 파일\Chapter04</Filter>
+    </ClCompile>
+    <ClCompile Include="BankingSystemVer01.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="BankingSystemVer02.cpp">
+      <Filter>소스 파일\OOP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
