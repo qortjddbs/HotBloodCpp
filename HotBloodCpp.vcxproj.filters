@@ -201,7 +201,4 @@
       <Filter>헤더 파일\4장</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="p04-32" />
-  </ItemGroup>
 </Project>

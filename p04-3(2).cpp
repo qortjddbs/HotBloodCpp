@@ -1,3 +1,4 @@
+// 이건 그냥 내가 짜본 코드
 //#include <iostream>
 //#include <cstring>
 //using namespace std;
@@ -53,6 +54,8 @@
 //	return 0;
 //}
 
+
+// 동적할당 한 버전
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstring>
