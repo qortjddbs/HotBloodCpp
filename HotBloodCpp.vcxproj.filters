@@ -186,6 +186,12 @@
     <ClCompile Include="ObjArr.cpp">
       <Filter>소스 파일\Chapter04</Filter>
     </ClCompile>
+    <ClCompile Include="ObjPtrArr.cpp">
+      <Filter>소스 파일\Chapter04</Filter>
+    </ClCompile>
+    <ClCompile Include="PointerThis.cpp">
+      <Filter>소스 파일\Chapter04</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
