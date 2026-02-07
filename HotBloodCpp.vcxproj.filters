@@ -31,6 +31,9 @@
     <Filter Include="소스 파일\OOP">
       <UniqueIdentifier>{17316ebd-cb99-457d-96ac-6aae6a8694c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Chapter05">
+      <UniqueIdentifier>{a15b4171-31fd-46f9-a5d5-d9670b2a5b51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TrueAndFalse.cpp">
@@ -203,6 +206,9 @@
     </ClCompile>
     <ClCompile Include="BankingSystemVer02.cpp">
       <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassInit.cpp">
+      <Filter>소스 파일\Chapter05</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
