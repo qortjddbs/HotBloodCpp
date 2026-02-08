@@ -222,6 +222,9 @@
     <ClCompile Include="ReturnObjCopycon.cpp">
       <Filter>소스 파일\Chapter05</Filter>
     </ClCompile>
+    <ClCompile Include="IKnowTempObj.cpp">
+      <Filter>소스 파일\Chapter05</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
