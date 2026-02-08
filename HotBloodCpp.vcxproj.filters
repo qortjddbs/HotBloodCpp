@@ -210,6 +210,9 @@
     <ClCompile Include="ClassInit.cpp">
       <Filter>소스 파일\Chapter05</Filter>
     </ClCompile>
+    <ClCompile Include="ShallowCopyError.cpp">
+      <Filter>소스 파일\Chapter05</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
