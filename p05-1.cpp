@@ -89,6 +89,14 @@ public:
 		strcpy(num, myNum);
 		rank = myRank;
 	}
+	NameCard(const NameCard& copy) : rank(copy.rank) {
+		name = new char[strlen(copy.name) + 1];
+		strcpy(name, copy.name);
+		company = new char[strlen(copy.company) + 1];
+		strcpy(company, copy.company);
+		num = new char[strlen(copy.num) + 1];
+		strcpy(num, copy.num);
+	}
 	~NameCard() {
 		delete[] name;
 		delete[] company;
