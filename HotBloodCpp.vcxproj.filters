@@ -246,6 +246,9 @@
     <ClCompile Include="MyFriendFunction.cpp">
       <Filter>소스 파일\Chapter06</Filter>
     </ClCompile>
+    <ClCompile Include="CComStatic.cpp">
+      <Filter>소스 파일\Chapter06</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
