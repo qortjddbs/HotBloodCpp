@@ -288,6 +288,9 @@
     <ClCompile Include="p07-1%282%29.cpp">
       <Filter>소스 파일\Chapter07</Filter>
     </ClCompile>
+    <ClCompile Include="BankingSystemVer04.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
