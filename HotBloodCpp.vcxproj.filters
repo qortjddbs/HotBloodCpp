@@ -252,6 +252,9 @@
     <ClCompile Include="NeedGlobal.cpp">
       <Filter>소스 파일\Chapter06</Filter>
     </ClCompile>
+    <ClCompile Include="StaticMember.cpp">
+      <Filter>소스 파일\Chapter06</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
