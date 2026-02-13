@@ -39,8 +39,7 @@ public:
 };
 
 int main(void) {
-	HybridWaterCar wc1;
-	wc1.ShowCurrentGauge();
+	HybridWaterCar wCar(79, 65, 35);
 
 	return 0;
 }
