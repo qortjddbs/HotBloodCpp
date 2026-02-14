@@ -300,6 +300,9 @@
     <ClCompile Include="HASInheritance.cpp">
       <Filter>소스 파일\Chapter07</Filter>
     </ClCompile>
+    <ClCompile Include="HASComposite.cpp">
+      <Filter>소스 파일\Chapter07</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
