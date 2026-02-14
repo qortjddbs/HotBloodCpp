@@ -306,6 +306,9 @@
     <ClCompile Include="P07-2(1).cpp">
       <Filter>소스 파일\Chapter07</Filter>
     </ClCompile>
+    <ClCompile Include="p07-2(2).cpp">
+      <Filter>소스 파일\Chapter07</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
