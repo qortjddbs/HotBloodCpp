@@ -16,7 +16,7 @@ class Square : public Rectangle {
 private:
 	int side;
 public:
-	Square(int s) : Rectangle(s, s) {	}
+	Square(int s) : Rectangle(s, s), side(s) {	}
 };
 
 int main(void) {
