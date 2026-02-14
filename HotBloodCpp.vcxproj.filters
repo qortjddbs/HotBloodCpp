@@ -294,6 +294,12 @@
     <ClCompile Include="ProtectedHeri.cpp">
       <Filter>소스 파일\Chapter07</Filter>
     </ClCompile>
+    <ClCompile Include="ISAInheritance.cpp">
+      <Filter>소스 파일\Chapter07</Filter>
+    </ClCompile>
+    <ClCompile Include="HASInheritance.cpp">
+      <Filter>소스 파일\Chapter07</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
