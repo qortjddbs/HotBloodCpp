@@ -309,6 +309,9 @@
     <ClCompile Include="p07-2(2).cpp">
       <Filter>소스 파일\Chapter07</Filter>
     </ClCompile>
+    <ClCompile Include="BankingSystemVer05.cpp">
+      <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
