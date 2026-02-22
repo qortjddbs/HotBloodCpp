@@ -75,12 +75,11 @@ public:
 	NormalAccount(int ID, const char* name, int money, int interest) : Account(ID, name, money), interestRate(interest) {}
 };
 
-class HighCreditAccount : public Account {
+class HighCreditAccount : public NormalAccount {
 private:
-	int interestRate;
 	int creditLevel;		// 신용 등급
 public:
-	HighCreditAccount(int ID, const char* name, int money, int interest, int credit) : Account(ID, name, money), interestRate(interest), creditLevel(credit) { }
+	HighCreditAccount(int ID, const char* name, int money, int interest, int credit) : NormalAccount(ID, name, money, interest), creditLevel(credit) { }
 };
 
 class AccountHandler {
