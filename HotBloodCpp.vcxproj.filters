@@ -324,6 +324,9 @@
     <ClCompile Include="EmployeeManager3.cpp">
       <Filter>소스 파일\Chapter08</Filter>
     </ClCompile>
+    <ClCompile Include="FunctionOverride.cpp">
+      <Filter>소스 파일\Chapter08</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
