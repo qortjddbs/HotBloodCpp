@@ -12,7 +12,7 @@ public:
 	}
 	void ShowYourName() const {
 		cout << "name: " << name << endl;
-	}
+	} 
 };
 
 class PermanentWorker : public Employee {
