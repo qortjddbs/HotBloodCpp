@@ -3,21 +3,21 @@ using namespace std;
 
 class First {
 public:
-	void MyFunc() {
+	virtual void MyFunc() {
 		cout << "First's MyFunc" << endl;
 	}
 };
 
 class Second : public First {
 	public:
-	void MyFunc() {
+	virtual void MyFunc() {
 		cout << "Second's MyFunc" << endl;
 	}
 };
 
 class Third : public Second {
 	public:
-	void MyFunc() {
+	virtual void MyFunc() {
 		cout << "Third's MyFunc" << endl;
 	}
 };
@@ -25,8 +25,7 @@ class Third : public Second {
 int main() {
 	Third* tptr = new Third();
 	Second* sptr = tptr;
-	First* fptr = tptr;
-
+	First* fptr = sptr;
 	fptr->MyFunc();
 	sptr->MyFunc();
 	tptr->MyFunc();
