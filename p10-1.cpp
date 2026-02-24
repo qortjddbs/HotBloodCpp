@@ -21,6 +21,8 @@ public:
 		ypos -= pos2.ypos;
 		return *this;
 	}
+	friend bool operator==(const Point& pos1, const Point& pos2);
+	friend bool operator!=(const Point& pos1, const Point& pos2);
 };
 
 Point operator+(const Point& pos1, const Point& pos2) {
@@ -33,6 +35,16 @@ Point operator-(const Point& pos1, const Point& pos2) {
 	return pos;
 }
 
+bool operator==(const Point& pos1, const Point& pos2) {
+	if (pos1.xpos == pos2.xpos && pos1.ypos == pos2.ypos) return true;
+	return false;
+}
+
+bool operator!=(const Point& pos1, const Point& pos2) {
+	if (pos1.xpos != pos2.xpos && pos1.ypos != pos2.ypos) return true;
+	return false;
+}
+
 int main(void) {
 	Point pos1(3, 4);
 	Point pos2(10, 20);
@@ -42,6 +54,13 @@ int main(void) {
 	pos1.ShowPosition();
 	pos1 -= pos2;
 	pos1.ShowPosition();
+
+	if (pos1 == pos2) {
+		cout << "pos1과 pos2의 모든 멤버가 값습니다." << endl;
+	}
+	else if (pos1 != pos2) {
+		cout << "pos1과 pos2의 모든 멤버가 다릅니다." << endl;
+	}
 
 	pos2.ShowPosition();
 	pos3.ShowPosition();
