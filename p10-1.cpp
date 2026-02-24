@@ -9,8 +9,8 @@ public:
 	void ShowPosition() const {
 		cout << '[' << xpos << ", " << ypos << ']' << endl;
 	}
-	friend Point operator+(const Point& pos1, const Point& pos2);
-	friend Point operator-(const Point& pos1, const Point& pos2);
+	friend Point operator+(const Point& , const Point&);
+	friend Point operator-(const Point& , const Point&);
 	Point& operator+=(const Point& pos2) {
 		xpos += pos2.xpos;
 		ypos += pos2.ypos;
@@ -21,8 +21,8 @@ public:
 		ypos -= pos2.ypos;
 		return *this;
 	}
-	friend bool operator==(const Point& pos1, const Point& pos2);
-	friend bool operator!=(const Point& pos1, const Point& pos2);
+	friend bool operator==(const Point& , const Point&);
+	friend bool operator!=(const Point& , const Point&);
 };
 
 Point operator+(const Point& pos1, const Point& pos2) {
@@ -41,19 +41,16 @@ bool operator==(const Point& pos1, const Point& pos2) {
 }
 
 bool operator!=(const Point& pos1, const Point& pos2) {
-	if (pos1.xpos != pos2.xpos && pos1.ypos != pos2.ypos) return true;
-	return false;
+	return !(pos1 == pos2);
 }
 
 int main(void) {
 	Point pos1(3, 4);
 	Point pos2(10, 20);
 	Point pos3 = pos1 + pos2;
-	pos1.ShowPosition();
-	pos1 += pos2;
-	pos1.ShowPosition();
-	pos1 -= pos2;
-	pos1.ShowPosition();
+	
+	(pos1 - pos2).ShowPosition();
+	(pos2 += pos3).ShowPosition();
 
 	if (pos1 == pos2) {
 		cout << "pos1과 pos2의 모든 멤버가 값습니다." << endl;
