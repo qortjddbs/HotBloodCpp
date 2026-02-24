@@ -1,7 +1,7 @@
 /*
 * Banking System Ver 0.6
 * 작성자 : 백성윤
-* 내용 : 이자관련 계좌 클래스의 추가
+* 내용 : 이자관련 계좌 클래스의 추가 (답지 참조)
 */
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -13,8 +13,8 @@ namespace BANK_COM {
 	enum {
 		MAKE = 1,
 		DEPOSIT = 2,
-		WITHDRAWAL = 3,
-		SHOWDATA = 4,
+		WITHDRAW = 3,
+		INQUIRE = 4,
 		EXIT = 5
 	};
 }
@@ -46,7 +46,7 @@ public:
 	int ReturnMoney() const {
 		return this->money;
 	}
-	void Deposit(int deposit_money) {
+	virtual void Deposit(int deposit_money) {
 		this->money += deposit_money;
 	}
 	void Withdrawal(int withdrawal_money) {
@@ -73,6 +73,10 @@ private:
 	int interestRate;	// 이자율
 public:
 	NormalAccount(int ID, const char* name, int money, int interest) : Account(ID, name, money), interestRate(interest) {}
+	virtual void Deposit(int deposit_money) {
+		Account::Deposit(deposit_money);
+		Account::Deposit(deposit_money * (interestRate / 100.0));
+	}
 };
 
 class HighCreditAccount : public NormalAccount {
@@ -80,6 +84,10 @@ private:
 	int creditLevel;		// 신용 등급
 public:
 	HighCreditAccount(int ID, const char* name, int money, int interest, int credit) : NormalAccount(ID, name, money, interest), creditLevel(credit) { }
+	virtual void Deposit(int deposit_money) {
+		NormalAccount::Deposit(deposit_money);
+		Account::Deposit(deposit_money * (creditLevel / 100.0));
+	}
 };
 
 class AccountHandler {
@@ -87,56 +95,32 @@ private:
 	Account* AccList[100];
 	int AccNum;
 public:
-	AccountHandler() : AccNum(0) {}
-	void AddAccount() {
+	AccountHandler() : AccNum(0) {} 
+	void ShowMenu() {
+		cout << endl;
+		cout << "-----Menu-----" << endl;
+		cout << "1. 계좌개설" << endl;
+		cout << "2. 입 금" << endl;
+		cout << "3. 출 금" << endl;
+		cout << "4. 계좌정보 전체 출력" << endl;
+		cout << "5. 프로그램 종료" << endl;
+	}
+	void MakeAccount() {
 		int kind;
 		cout << "[계좌종류선택]" << endl;
 		cout << "1. 보통예금계좌 2. 신용신뢰계좌" << endl;
 		cout << "선택: ";
 		cin >> kind;
 		if (kind == NORMAL) {
-			cout << "[보통예금계좌 개설]" << endl;
-			int ID;
-			char name[20];		// 이름은 최대 20자까지 입력 가능
-			int money;
-			int interestRate;
-			cout << "계좌ID : ";
-			cin >> ID;
-			cout << "이 름 : ";
-			cin >> name;
-			cout << "입금액 : ";
-			cin >> money;
-			cout << "이자율: ";
-			cin >> interestRate;
-			AccList[AccNum++] = new NormalAccount(ID, name, money, interestRate);
-			cout << "계좌가 성공적으로 개설되었습니다!" << endl;
+			MakeNormalAccount();
 		}
 		else if (kind == CREDIT) {
-			cout << "[신용신뢰계좌 개설]" << endl;
-			int ID;
-			char name[20];		// 이름은 최대 20자까지 입력 가능
-			int money;
-			int interestRate;
-			cout << "계좌ID : ";
-			cin >> ID;
-			cout << "이 름 : ";
-			cin >> name;
-			cout << "입금액 : ";
-			cin >> money;
-			cout << "이자율: ";
-			cin >> interestRate;
-			int creditLevel;
-			cout << "신용등급(1toA, 2toB, 3toC): ";
-			cin >> creditLevel;
-			AccList[AccNum++] = new HighCreditAccount(ID, name, money, interestRate, creditLevel);
-			cout << "계좌가 성공적으로 개설되었습니다!" << endl;
+			MakeHighCreditAccount();
 		}
 		else {
 			cout << "올바른 계좌 종류를 선택해주세요" << endl;
-			return;
 		}
 	}
-
 	void DepositMoney() {
 		int ID = -1;
 		int index = -1;
@@ -162,7 +146,7 @@ public:
 			return;
 		}
 	}
-	void WithdrawalMoney() {
+	void WithdrawMoney() {
 		int ID = -1;
 		int index = -1;
 		int withdrawal_money = 0;
@@ -186,7 +170,7 @@ public:
 			return;
 		}
 	}
-	void ShowData() const {
+	void ShowAllAccInfo() const {
 		if (AccNum <= 0) {
 			cout << "현재 개설된 계좌가 없습니다!" << endl;
 		}
@@ -200,48 +184,95 @@ public:
 		cout << "프로그램을 종료합니다." << endl;
 		return;
 	}
-
 	~AccountHandler() {
 		for (int i = 0; i < AccNum; ++i) {
 			delete AccList[i];
 		}
 	}
+protected:		// protected는 private과 매우 유사하다. 차이점은 딱 하나. 유도 클래스에서 접근이 가능하다는 것이다.
+	void MakeNormalAccount(void);
+	void MakeHighCreditAccount(void);
 };
 
+void AccountHandler::MakeNormalAccount(void) {
+	cout << "[보통예금계좌 개설]" << endl;
+	int ID;
+	char name[20];		// 이름은 최대 20자까지 입력 가능
+	int money;
+	int interestRate;
+	cout << "계좌ID : ";
+	cin >> ID;
+	cout << "이 름 : ";
+	cin >> name;
+	cout << "입금액 : ";
+	cin >> money;
+	cout << "이자율: ";
+	cin >> interestRate;
+	AccList[AccNum++] = new NormalAccount(ID, name, money, interestRate);
+	cout << "계좌가 성공적으로 개설되었습니다!" << endl;
+}
+void AccountHandler::MakeHighCreditAccount(void) {
+	cout << "[신용신뢰계좌 개설]" << endl;
+	int ID;
+	char name[20];		// 이름은 최대 20자까지 입력 가능
+	int money;
+	int interestRate;
+	cout << "계좌ID : ";
+	cin >> ID;
+	cout << "이 름 : ";
+	cin >> name;
+	cout << "입금액 : ";
+	cin >> money;
+	cout << "이자율: ";
+	cin >> interestRate;
+	int creditLevel;
+	cout << "신용등급(1toA, 2toB, 3toC): ";
+	cin >> creditLevel;
+	switch (creditLevel) {
+	case 1:
+		AccList[AccNum++] = new HighCreditAccount(ID, name, money, interestRate, LEVEL_A);
+		break;
+	case 2:
+		AccList[AccNum++] = new HighCreditAccount(ID, name, money, interestRate, LEVEL_B);
+		break;
+	case 3:
+		AccList[AccNum++] = new HighCreditAccount(ID, name, money, interestRate, LEVEL_C);
+		break;
+	}
+	
+	cout << "계좌가 성공적으로 개설되었습니다!" << endl;
+}
+
 int main(void) {
-	AccountHandler handler;
-	int command = -1;
+	AccountHandler manager;
+	int choice;
 
 	while (1) {
-		cout << endl;
-		cout << "-----Menu-----" << endl;
-		cout << "1. 계좌개설" << endl;
-		cout << "2. 입 금" << endl;
-		cout << "3. 출 금" << endl;
-		cout << "4. 계좌정보 전체 출력" << endl;
-		cout << "5. 프로그램 종료" << endl;
+		manager.ShowMenu();
 		cout << "선택 : ";
-		cin >> command;
+		cin >> choice;
 		cout << endl;
 
-		switch (command) {
+		switch (choice) {
 		case BANK_COM::MAKE:
-			handler.AddAccount();
+			manager.MakeAccount();
 			break;
 		case BANK_COM::DEPOSIT: {
-			handler.DepositMoney();
+			manager.DepositMoney();
 			break;
 		}
-		case BANK_COM::WITHDRAWAL: {
-			handler.WithdrawalMoney();
+		case BANK_COM::WITHDRAW: {
+			manager.WithdrawMoney();
 			break;
 		}
-		case BANK_COM::SHOWDATA:
-			handler.ShowData();
+		case BANK_COM::INQUIRE:
+			manager.ShowAllAccInfo();
 			break;
 		case BANK_COM::EXIT:
-			handler.quit();
+			manager.quit();
 			return 0;
+		default:
+			cout << "Illegal selection.." << endl;
 		}
 	}
 }
