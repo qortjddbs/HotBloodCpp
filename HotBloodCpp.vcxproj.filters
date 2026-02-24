@@ -46,11 +46,14 @@
     <Filter Include="소스 파일\Chapter09">
       <UniqueIdentifier>{a537f1d5-8ff5-46e5-b8e9-4b3e0ca3d26d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\OOP.cpp">
-      <UniqueIdentifier>{f35cff04-60ef-40dc-8cd5-be8cf3085a3d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="헤더 파일\OOP.h">
       <UniqueIdentifier>{0ef8679e-1193-4232-a486-aad8da532ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\OOP\OOP.cpp">
+      <UniqueIdentifier>{f35cff04-60ef-40dc-8cd5-be8cf3085a3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Chapter10">
+      <UniqueIdentifier>{6cd19ba1-7b27-4b05-aa1c-41e54a2fc8dd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -373,13 +376,16 @@
       <Filter>소스 파일\Chapter09</Filter>
     </ClCompile>
     <ClCompile Include="Account.cpp">
-      <Filter>소스 파일\OOP.cpp</Filter>
+      <Filter>소스 파일\OOP\OOP.cpp</Filter>
     </ClCompile>
     <ClCompile Include="AccountHandler.cpp">
-      <Filter>소스 파일\OOP.cpp</Filter>
+      <Filter>소스 파일\OOP\OOP.cpp</Filter>
     </ClCompile>
     <ClCompile Include="BankingSystemMain.cpp">
-      <Filter>소스 파일\OOP.cpp</Filter>
+      <Filter>소스 파일\OOP\OOP.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstOperationOverloading.cpp">
+      <Filter>소스 파일\Chapter10</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
