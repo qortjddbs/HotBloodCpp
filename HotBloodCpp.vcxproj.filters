@@ -354,6 +354,9 @@
     <ClCompile Include="RealObjUnder2.cpp">
       <Filter>소스 파일\Chapter09</Filter>
     </ClCompile>
+    <ClCompile Include="VirtualInternal.cpp">
+      <Filter>소스 파일\Chapter09</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
