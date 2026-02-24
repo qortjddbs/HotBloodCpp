@@ -43,6 +43,9 @@
     <Filter Include="소스 파일\Chapter08">
       <UniqueIdentifier>{28c732a5-583c-4c6d-a422-fce7fb5335a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Chapter09">
+      <UniqueIdentifier>{a537f1d5-8ff5-46e5-b8e9-4b3e0ca3d26d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TrueAndFalse.cpp">
@@ -344,6 +347,9 @@
     </ClCompile>
     <ClCompile Include="BankingSystemVer06.cpp">
       <Filter>소스 파일\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="RealObjUnder1.cpp">
+      <Filter>소스 파일\Chapter09</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
