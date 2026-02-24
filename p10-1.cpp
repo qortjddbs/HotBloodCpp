@@ -11,6 +11,16 @@ public:
 	}
 	friend Point operator+(const Point& pos1, const Point& pos2);
 	friend Point operator-(const Point& pos1, const Point& pos2);
+	Point& operator+=(const Point& pos2) {
+		xpos += pos2.xpos;
+		ypos += pos2.ypos;
+		return *this;
+	}
+	Point& operator-=(const Point& pos2) {
+		xpos -= pos2.xpos;
+		ypos -= pos2.ypos;
+		return *this;
+	}
 };
 
 Point operator+(const Point& pos1, const Point& pos2) {
@@ -27,9 +37,12 @@ int main(void) {
 	Point pos1(3, 4);
 	Point pos2(10, 20);
 	Point pos3 = pos1 + pos2;
-	// pos1 += pos2; -> 이건 또 안되네?
-
 	pos1.ShowPosition();
+	pos1 += pos2;
+	pos1.ShowPosition();
+	pos1 -= pos2;
+	pos1.ShowPosition();
+
 	pos2.ShowPosition();
 	pos3.ShowPosition();
 	return 0;

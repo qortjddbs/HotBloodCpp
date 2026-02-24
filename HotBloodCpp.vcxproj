@@ -303,7 +303,7 @@
     <ClCompile Include="p08-1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="p10-1(1).cpp" />
+    <ClCompile Include="p10-1.cpp" />
     <ClCompile Include="PassObjCopycon.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
