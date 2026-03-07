@@ -23,6 +23,7 @@ public:
 		return tmp;
 	}
 	friend Point& operator--(Point& ref);
+	friend Point& operator~(Point& ref);
 };
 
 Point& operator--(Point& ref) {
@@ -31,13 +32,18 @@ Point& operator--(Point& ref) {
 	return ref;
 }
 
+Point& operator~(Point& ref) {
+	Point tmp(ref.ypos, ref.xpos);
+	return tmp;
+}
+
 int main(void) {
 	Point pos(1, 2);
 	++pos;
 	pos.ShowPosition();
 	--pos;
 	pos.ShowPosition();
-	Point pos2 = -pos;
+	Point pos2 = ~pos;
 	pos2.ShowPosition();
 
 	++(++pos);
