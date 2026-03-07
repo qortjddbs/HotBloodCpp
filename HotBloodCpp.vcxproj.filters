@@ -405,6 +405,9 @@
     <ClCompile Include="PostOpndOverloading.cpp">
       <Filter>소스 파일\Chapter10</Filter>
     </ClCompile>
+    <ClCompile Include="PointMultipleOperation.cpp">
+      <Filter>소스 파일\Chapter10</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
