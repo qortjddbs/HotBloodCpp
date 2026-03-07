@@ -18,12 +18,12 @@ public:
 		ypos += 1;
 		return *this;
 	}
-	Point& operator-() {
+	Point operator-() {
 		Point tmp(-xpos, -ypos);
 		return tmp;
 	}
 	friend Point& operator--(Point& ref);
-	friend Point& operator~(Point& ref);
+	friend Point operator~(const Point& ref);
 };
 
 Point& operator--(Point& ref) {
@@ -32,7 +32,7 @@ Point& operator--(Point& ref) {
 	return ref;
 }
 
-Point& operator~(Point& ref) {
+Point operator~(const Point& ref) {
 	Point tmp(ref.ypos, ref.xpos);
 	return tmp;
 }
