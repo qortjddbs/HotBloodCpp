@@ -18,9 +18,13 @@ ostream& operator<<(ostream& os, const Point& pos) {
 }
 
 int main(void) {
-	Point pos1(1, 3);
+	Point pos1;
+	cout << "x, y 좌표 순으로 입력: ";
+	cin >> pos1;
 	cout << pos1;
-	Point pos2(101, 303);
+
+	Point pos2;
+	cout << "x, y 좌표 순으로 입력: ";
+	cin >> pos2;
 	cout << pos2;
-	return 0;
 }
