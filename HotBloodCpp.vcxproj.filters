@@ -414,6 +414,12 @@
     <ClCompile Include="ConsoleOutput.cpp">
       <Filter>소스 파일\Chapter10</Filter>
     </ClCompile>
+    <ClCompile Include="IterateConsoleOutput.cpp">
+      <Filter>소스 파일\Chapter10</Filter>
+    </ClCompile>
+    <ClCompile Include="PointConsoleOutput.cpp">
+      <Filter>소스 파일\Chapter10</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
