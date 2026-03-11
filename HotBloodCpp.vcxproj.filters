@@ -55,6 +55,9 @@
     <Filter Include="소스 파일\Chapter10">
       <UniqueIdentifier>{6cd19ba1-7b27-4b05-aa1c-41e54a2fc8dd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Chapter11">
+      <UniqueIdentifier>{49931c52-a49e-448e-8b19-701402c0d8e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TrueAndFalse.cpp">
@@ -420,6 +423,12 @@
     <ClCompile Include="PointConsoleOutput.cpp">
       <Filter>소스 파일\Chapter10</Filter>
     </ClCompile>
+    <ClCompile Include="FirstOperationOverloading%282%29.cpp">
+      <Filter>소스 파일\Chapter11</Filter>
+    </ClCompile>
+    <ClCompile Include="AssignShallowCopyError.cpp">
+      <Filter>소스 파일\Chapter11</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
@@ -452,5 +461,8 @@
     <ClInclude Include="BankingCommonDecl.h">
       <Filter>헤더 파일\OOP.h</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FirstOperationOverloading2" />
   </ItemGroup>
 </Project>
