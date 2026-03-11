@@ -432,6 +432,9 @@
     <ClCompile Include="InheritAssignOperation.cpp">
       <Filter>소스 파일\Chapter11</Filter>
     </ClCompile>
+    <ClCompile Include="p11-1(1).cpp">
+      <Filter>소스 파일\Chapter11</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
@@ -464,8 +467,5 @@
     <ClInclude Include="BankingCommonDecl.h">
       <Filter>헤더 파일\OOP.h</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="FirstOperationOverloading2" />
   </ItemGroup>
 </Project>
