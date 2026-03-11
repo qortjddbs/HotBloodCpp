@@ -26,12 +26,12 @@ public:
 		cout << num3 << ", " << num4 << endl;
 	}
 
-	//Second& operator=(const Second& ref) {
-	//	cout << "Second& operator=()" << endl;
-	//	num3 = ref.num3;
-	//	num4 = ref.num4;
-	//	return *this;
-	//}
+	Second& operator=(const Second& ref) {
+		cout << "Second& operator=()" << endl;
+		num3 = ref.num3;
+		num4 = ref.num4;
+		return *this;
+	}
 };
 
 int main(void) {
