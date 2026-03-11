@@ -429,6 +429,9 @@
     <ClCompile Include="AssignShallowCopyError.cpp">
       <Filter>소스 파일\Chapter11</Filter>
     </ClCompile>
+    <ClCompile Include="InheritAssignOperation.cpp">
+      <Filter>소스 파일\Chapter11</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="p01-4.h">
