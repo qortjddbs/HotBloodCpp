@@ -28,6 +28,7 @@ public:
 
 	Second& operator=(const Second& ref) {
 		cout << "Second& operator=()" << endl;
+		First::operator=(ref);
 		num3 = ref.num3;
 		num4 = ref.num4;
 		return *this;
