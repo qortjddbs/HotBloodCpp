@@ -26,8 +26,7 @@ public:
 			pistol = NULL;
 	}
 	Police(const Police& ref) : handcuffs(ref.handcuffs) {
-		pistol = new Gun(*(ref.pistol));
-		handcuffs = ref.handcuffs;
+
 	}
 	void PutHandcuff() {
 		cout << "SNAP!" << endl;
@@ -46,10 +45,7 @@ public:
 	}
 
 	Police& operator=(const Police& ref) {
-		if (pistol != NULL) delete pistol;
-		pistol = new Gun(*(ref.pistol));
-		handcuffs = ref.handcuffs;
-		return *this;
+
 	}
 };
 
